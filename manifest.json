@@ -1,11 +1,11 @@
 {
 	"id": "sample-plugin",
-	"name": "Sample Plugin",
-	"version": "1.0.0",
+	"name": "Checkbox Reorder Plugin",
+	"version": "1.0.1",
 	"minAppVersion": "0.15.0",
-	"description": "This is a sample plugin for Obsidian. This plugin demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"description": "This obsidian plugin automatically puts checked checkboxes to the end of the according list. ",
+	"author": "Ivan Knöfler",
+	"authorUrl": "https://github.com/Erl-koenig",
+	"fundingUrl": "https://www.buymeacoffee.com/erlkoenig",
 	"isDesktopOnly": false
 }
