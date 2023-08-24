@@ -1,6 +1,6 @@
 {
 	"id": "checkbox-reorder",
-	"name": "Checkbox Reorder Plugin",
+	"name": "Checkbox Reorder",
 	"version": "1.0.1",
 	"minAppVersion": "0.15.0",
 	"description": "This obsidian plugin automatically puts checked checkboxes to the end of the according list. ",
