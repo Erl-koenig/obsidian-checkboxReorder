@@ -1,5 +1,5 @@
 {
-	"id": "sample-plugin",
+	"id": "checkbox-reorder",
 	"name": "Checkbox Reorder Plugin",
 	"version": "1.0.1",
 	"minAppVersion": "0.15.0",
