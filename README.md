@@ -1,7 +1,3 @@
-# About Obsidian
-
-- [Obsidian](https://obsidian.md/) is a note taking app based on Markdown files
-- It's extensible
 
 # About this plugin
 
@@ -20,6 +16,11 @@ Output:
 - [ ] Shower
 - [x] Groceries
 - [x] Read
+
+# About Obsidian
+
+- [Obsidian](https://obsidian.md/) is a note taking app based on Markdown files
+- It's extensible
 
 # Resources
 
