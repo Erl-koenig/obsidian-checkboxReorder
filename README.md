@@ -5,8 +5,7 @@ This plugin reorders completed checkboxes to the end of the according list. It c
 
 
 
-- Press CTRL + P (cmd + P on mac) and run "Reorder checkboxes in list"
-- simple plugin that puts checked checkboxes to the end of a list
+- Press CTRL + P (cmd + P on mac) and run "Reorder checkboxes"
 - For convenience, use a keyboard shortcut to bind the command
 
 Examples:
