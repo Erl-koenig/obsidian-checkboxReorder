@@ -1,27 +1,25 @@
 
-# About this plugin
+# About
+
+This plugin reorders completed checkboxes to the end of the according list. It can also be used with nested checkboxes.
+
+
 
 - Press CTRL + P (cmd + P on mac) and run "Reorder checkboxes in list"
 - simple plugin that puts checked checkboxes to the end of a list
 - For convenience, use a keyboard shortcut to bind the command
 
-Input:
-- [x] Groceries
-- [ ] Clean
-- [x] Read
-- [ ] Shower
+Examples:
 
-Output:
-- [ ] Clean
-- [ ] Shower
-- [x] Groceries
-- [x] Read
+![](https://i.imgur.com/fEyG45b.png)
 
-# About Obsidian
+![](https://i.imgur.com/OnrstOx.png)
 
+For more infos, visit my [blog post](https://vercel.com/erl-koenig/blog/settings/domains)
+
+**Obsidian**
 - [Obsidian](https://obsidian.md/) is a note taking app based on Markdown files
 - It's extensible
 
-# Resources
-
+**Resources**
 - Official [Obsidian Plugin Template](https://github.com/obsidianmd/obsidian-sample-plugin)
