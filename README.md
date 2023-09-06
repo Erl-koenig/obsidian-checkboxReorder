@@ -1,7 +1,7 @@
 
 # About
 
-This plugin reorders completed checkboxes to the end of the according list. It can also be used with nested checkboxes.
+This plugin reorders completed checkboxes to the end of the according list.
 
 ![A demo of the plugin working](demo.gif)
 
@@ -12,9 +12,10 @@ Examples:
 
 ![](https://i.imgur.com/fEyG45b.png)
 
-![](https://i.imgur.com/OnrstOx.png)
-
 For more infos, visit my [blog post](https://erlkoenig-blog.vercel.app/obsidian-checkbox-reorder)
+
+Current bug:
+Nested checkboxes aren't added to the bottom
 
 **Obsidian**
 - [Obsidian](https://obsidian.md/) is a note taking app based on Markdown files
