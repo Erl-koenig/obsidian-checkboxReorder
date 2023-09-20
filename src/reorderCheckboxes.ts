@@ -24,7 +24,7 @@ function reorderCheckboxesInList(inputText: string) {
 }
 
 export function reorderCheckboxesInFile(inputText: string) {
-  const checkboxListPattern = /((?:^|\n)- [^\n]+)((?:^|\n)[ \t]*- [^\n]+)+(?:$|\n)/g;
+  const checkboxListPattern = /^- .+(\n[ \t]*- .*)*$/gm;
   const reorderedText = inputText.replace(
     checkboxListPattern,
     reorderCheckboxesInList
