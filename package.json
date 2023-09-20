@@ -1,7 +1,7 @@
 {
-	"name": "obsidian-sample-plugin",
-	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"name": "obsidian-reorder-checkboxes",
+	"version": "1.0.4",
+	"description": "This plugin adds a command that lets you reorder checkboxes in the order todo > done",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
