@@ -1,5 +1,5 @@
 import { Plugin, MarkdownView, Editor } from "obsidian";
-import { reorderList } from "reorderCheckboxes";
+import { reorderList } from "src/reorderCheckboxes";
 
 export default class CheckboxReorderPlugin extends Plugin {
 	async onload() {
