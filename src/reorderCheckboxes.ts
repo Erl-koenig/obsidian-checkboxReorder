@@ -1,5 +1,5 @@
 
-export function reorderList(inputText: string) {
+function reorderCheckboxesInList(inputText: string) {
   const checkboxPattern = /^- \[(x| )\] .+$/gm;
 
   const uncheckedCheckboxes =
@@ -20,5 +20,10 @@ export function reorderList(inputText: string) {
     () => reorderedCheckboxes.shift() || "",
   );
 
+  return reorderedText;
+}
+
+export function reorderCheckboxesInFile(inputText: string) {
+  const reorderedText = reorderCheckboxesInList(inputText);
   return reorderedText;
 }

@@ -1,5 +1,5 @@
 // basic spec file
-import { reorderList } from './reorderCheckboxes';
+import { reorderCheckboxesInFile } from './reorderCheckboxes';
 
 describe('reorderCheckboxes', () => {
   it('should reorder checkboxes', () => {
@@ -13,7 +13,31 @@ describe('reorderCheckboxes', () => {
 - [ ] third
 - [x] second
 `;
-    const actualOutput = reorderList(input);
+    const actualOutput = reorderCheckboxesInFile(input);
     expect(actualOutput).toEqual(expectedOutput);
   });
+
+  it('should reorder checkboxes in several Lists', () => {
+    const input = `
+- [ ] first
+- [x] second
+- [ ] third
+
+- [ ] first
+- [x] second
+- [ ] third
+`;
+    const expectedOutput = `
+- [ ] first
+- [ ] third
+- [x] second
+
+- [ ] first
+- [ ] third
+- [x] second
+`;
+    const actualOutput = reorderCheckboxesInFile(input);
+    expect(actualOutput).toEqual(expectedOutput);
+  });
+
 });
