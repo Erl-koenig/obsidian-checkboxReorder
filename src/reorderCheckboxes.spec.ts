@@ -40,4 +40,23 @@ describe('reorderCheckboxes', () => {
     expect(actualOutput).toEqual(expectedOutput);
   });
 
+  it('should move child lists with their parents', () => {
+    const input = `
+- [ ] first
+- [x] second
+- [ ] third
+  - [ ] first child of third
+  - [ ] second child of third
+`;
+    const expectedOutput = `
+- [ ] first
+- [ ] third
+  - [ ] first child of third
+  - [ ] second child of third
+- [x] second
+`;
+    const actualOutput = reorderCheckboxesInFile(input);
+    expect(actualOutput).toEqual(expectedOutput);
+  });
+
 });
