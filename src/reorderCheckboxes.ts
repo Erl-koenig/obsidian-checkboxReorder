@@ -1,15 +1,15 @@
 
 function reorderCheckboxesInList(inputText: string) {
-  const checkboxPattern = /^- \[(x| )\] .+$/gm;
+  const checkboxPattern = /^- \[(x| )\] .+(\n[ \t]+-.*)*$/gm;
+
+  const allCheckboxes = inputText.match(checkboxPattern) ?? [];
 
   const uncheckedCheckboxes =
-    inputText
-      .match(checkboxPattern)
-      ?.filter((cb) => cb.startsWith("- [ ]")) || [];
+    allCheckboxes
+      .filter((cb) => cb.startsWith("- [ ]"));
   const checkedCheckboxes =
-    inputText
-      .match(checkboxPattern)
-      ?.filter((cb) => cb.startsWith("- [x]")) || [];
+    allCheckboxes
+      .filter((cb) => cb.startsWith("- [x]"));
 
   const reorderedCheckboxes = [
     ...uncheckedCheckboxes,
