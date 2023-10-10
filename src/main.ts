@@ -22,9 +22,14 @@ export default class CheckboxReorderPlugin extends Plugin {
 		this.addSettingTab(new CheckboxReorderPluginSettingTab(this.app, this))
 
 		this.registerEvent(this.app.vault.on("modify", () => {
+			
 			if(this.settings.autoReorder){
 				const view = this.app.workspace.getActiveViewOfType(MarkdownView);
-				view?.editor && this.reorderCheckboxes(view?.editor);
+				const cursorPosition = view?.editor.getCursor()
+				if(view?.editor && cursorPosition){
+					this.reorderCheckboxes(view?.editor);
+					view?.editor.setCursor(cursorPosition);
+				}
 			}
 		}))
 
@@ -43,6 +48,7 @@ export default class CheckboxReorderPlugin extends Plugin {
 
 	async saveSettings() {
 		await this.saveData(this.settings);
+		this.reorderCheckboxes(this.app.workspace.getActiveViewOfType(MarkdownView)?.editor)
 	}
 
 	reorderCheckboxes(editor: Editor) {
