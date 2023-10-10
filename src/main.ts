@@ -21,13 +21,12 @@ export default class CheckboxReorderPlugin extends Plugin {
 
 		this.addSettingTab(new CheckboxReorderPluginSettingTab(this.app, this))
 
-		if(this.settings.autoReorder){
-			this.registerEvent(this.app.vault.on("modify", () => {
+		this.registerEvent(this.app.vault.on("modify", () => {
+			if(this.settings.autoReorder){
 				const view = this.app.workspace.getActiveViewOfType(MarkdownView);
-
-				this.reorderCheckboxes(view?.editor);
-			}))
-		}
+				view?.editor && this.reorderCheckboxes(view?.editor);
+			}
+		}))
 
 		this.addCommand({
 			id: "reorder-checkboxes",
