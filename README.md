@@ -11,6 +11,10 @@ Examples:
 
 ![](https://i.imgur.com/fEyG45b.png)
 
+Settings: 
+
+- Toggle "Auto Reorder" setting in settings tab to allow plugin to automatically reorder checklists when file is modified.
+
 **More Infos**
 
 [Github repository](https://github.com/Erl-koenig/obsidian-checkboxReorder)
