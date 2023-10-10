@@ -16,10 +16,9 @@ export class CheckboxReorderPluginSettingTab extends PluginSettingTab{
 
 		new Setting(containerEl)
 			.setName("Auto Reorder")
-			.setDesc("If toggled, checkboxes will be automatically reordered when checked.")
+			.setDesc("If toggled, checkboxes will be reordered when file is modified.")
 			.addToggle((toggle) => 
 				toggle
-					.setValue(false)
 					.setValue(this.plugin.settings.autoReorder)
 					.onChange(async (value) => {
 						this.plugin.settings.autoReorder = value;
