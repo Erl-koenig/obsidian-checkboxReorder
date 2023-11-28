@@ -15,8 +15,6 @@ Examples:
 
 [Github repository](https://github.com/Erl-koenig/obsidian-checkboxReorder)
 
-For more infos, visit my [blog post](https://erlkoenig-blog.vercel.app/obsidian-checkbox-reorder)
-
 Made by:
 [Erl-koenig](https://github.com/Erl-koenig),
 Thanks to [lukemt](https://github.com/lukemt) for contributing to the project
