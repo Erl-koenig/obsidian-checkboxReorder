@@ -1,10 +1,13 @@
 function reorderCheckboxesInList(inputText: string, moveUp: boolean) {
-	const checkboxPattern = /^- \[(x| )\] .+(\n[ \t]+-.*)*$/gm;
+	const checkboxPattern = /^- \[(x| |\/)\] .+(\n[ \t]+-.*)*$/gm;
 
 	const allCheckboxes = inputText.match(checkboxPattern) ?? [];
 
 	const uncheckedCheckboxes = allCheckboxes.filter((cb) =>
 		cb.startsWith("- [ ]"),
+	);
+	const halfCheckedCheckboxes = allCheckboxes.filter(
+		(cb) => cb.startsWith("- [/]")
 	);
 	const checkedCheckboxes = allCheckboxes.filter((cb) =>
 		cb.startsWith("- [x]"),
@@ -12,9 +15,9 @@ function reorderCheckboxesInList(inputText: string, moveUp: boolean) {
 
 	let reorderedCheckboxes: string[];
 	if (moveUp) {
-		reorderedCheckboxes = [...uncheckedCheckboxes, ...checkedCheckboxes];
+		reorderedCheckboxes = [...uncheckedCheckboxes, ...halfCheckedCheckboxes, ...checkedCheckboxes];
 	} else {
-		reorderedCheckboxes = [...checkedCheckboxes, ...uncheckedCheckboxes];
+		reorderedCheckboxes = [...checkedCheckboxes, ...halfCheckedCheckboxes, ...uncheckedCheckboxes];
 	}
 
 	const reorderedText = inputText.replace(
@@ -26,7 +29,7 @@ function reorderCheckboxesInList(inputText: string, moveUp: boolean) {
 }
 
 export function reorderCheckboxesInFile(inputText: string, moveUp: boolean) {
-	const checkboxListPattern = /^- .+(\n[ \t]*- .*)*$/gm;
+	const checkboxListPattern = /^- \[.+(\n[ \t]*- .*)*$/gm;
 	const reorderedText = inputText.replace(checkboxListPattern, (match) =>
 		reorderCheckboxesInList(match, moveUp),
 	);
