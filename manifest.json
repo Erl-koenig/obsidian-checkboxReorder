@@ -1,7 +1,7 @@
 {
 	"id": "checkbox-reorder",
 	"name": "Checkbox Reorder",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"minAppVersion": "0.15.0",
 	"description": "Reorder completed checkboxes to the end of the according list.",
 	"author": "Ivan Knöfler",
