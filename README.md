@@ -6,9 +6,8 @@ This plugin reorders completed checkboxes to the end of the according list.
 
 -   Press CTRL + P (cmd + P on mac) and run "Reorder checkboxes"
 -   For convenience, use a keyboard shortcut to bind the command
-
-## Fork changes:
-added support for -[/] annotaded half-checked checkboxes (their functionality is provided by differente plugins). They are always placed in the middle between checked and unchecked. 
+-   Setting to choose sorting style: Top/Bottom
+-   Supports for -[/] annotaded half-checked checkboxes (Will be placed in the middle between checked and unchecked)
 
 Examples:
 
