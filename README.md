@@ -15,8 +15,16 @@ Examples:
 
 **More Infos**
 
-[Github repository](https://github.com/Erl-koenig/obsidian-checkboxReorder)
+For questions, issues, or feature requests, please visit the [plugin's GitHub repository](https://github.com/Erl-koenig/obsidian-dailyPrompt).
 
 Made by:
 [Erl-koenig](https://github.com/Erl-koenig),
 Thanks to [lukemt](https://github.com/lukemt) for contributing to the project
+
+## Say Thanks 🙏
+
+If you find this plugin helpful, consider supporting its development
+
+[<img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="BuyMeACoffee" width="100">](https://www.buymeacoffee.com/erlkoenig)
+
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/Erl-koenig?style=social)](https://github.com/sponsors/Erl-koenig)
