@@ -1,4 +1,4 @@
-// basic spec file
+import { describe, expect, it } from "vitest";
 import { reorderCheckboxesInFile } from './reorderCheckboxes';
 
 describe('reorderCheckboxes', () => {

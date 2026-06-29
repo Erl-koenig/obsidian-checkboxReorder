@@ -2,7 +2,6 @@ import {
 	Plugin,
 	MarkdownView,
 	Editor,
-	WorkspaceLeaf,
 	App,
 	PluginSettingTab,
 	Setting,
@@ -23,21 +22,15 @@ export default class CheckboxReorderPlugin extends Plugin {
 	async onload() {
 		await this.loadSettings();
 
-		console.log("Checkbox Reorder Plugin loaded");
-
 		this.addCommand({
 			id: "reorder-checkboxes",
 			name: "Reorder Checkboxes in List",
-			editorCallback: (editor: Editor, view: MarkdownView) => {
+			editorCallback: (editor: Editor, _view: MarkdownView) => {
 				this.reorderCheckboxes(editor);
 			},
 		});
 
 		this.addSettingTab(new CheckboxReorderSettingsTab(this.app, this));
-	}
-
-	onunload() {
-		console.log("Checkbox Reorder Plugin unloaded");
 	}
 
 	async loadSettings() {
@@ -75,7 +68,7 @@ class CheckboxReorderSettingsTab extends PluginSettingTab {
 
 		containerEl.empty();
 
-		containerEl.createEl("h2", { text: "Checkbox Reorder Settings" });
+		new Setting(containerEl).setName("Checkbox Reorder Settings").setHeading();
 
 		new Setting(containerEl)
 			.setName("Top / Bottom")
