@@ -1,5 +1,5 @@
 function reorderCheckboxesInList(inputText: string, moveUp: boolean) {
-	const checkboxPattern = /^- \[(x| |\/)\] .+(\n[ \t]+-.*)*$/gm;
+	const checkboxPattern = /^- \[(x| |\/)\] .+(\n[ \t]+.*)*$/gm;
 
 	const allCheckboxes = inputText.match(checkboxPattern) ?? [];
 
@@ -29,7 +29,7 @@ function reorderCheckboxesInList(inputText: string, moveUp: boolean) {
 }
 
 export function reorderCheckboxesInFile(inputText: string, moveUp = true) {
-	const checkboxListPattern = /^- \[.+(\n[ \t]*- .*)*$/gm;
+	const checkboxListPattern = /^- \[.+(\n([ \t]+.*|- .+))*$/gm;
 	const reorderedText = inputText.replace(checkboxListPattern, (match) =>
 		reorderCheckboxesInList(match, moveUp),
 	);
