@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     tags:
-      - "v*"
+      - "[0-9]+.[0-9]+.[0-9]+"
   workflow_dispatch:
 
 permissions:
@@ -36,11 +36,11 @@ jobs:
       - name: Validate tag version
         if: github.event_name == 'push'
         run: |
-          TAG_VERSION="${GITHUB_REF_NAME#v}"
+          TAG_VERSION="$GITHUB_REF_NAME"
           MANIFEST_VERSION="$(node -p "require('./manifest.json').version")"
 
           if [ "$TAG_VERSION" != "$MANIFEST_VERSION" ]; then
-            echo "Tag version v$TAG_VERSION does not match manifest.json version $MANIFEST_VERSION."
+            echo "Tag version $TAG_VERSION does not match manifest.json version $MANIFEST_VERSION."
             exit 1
           fi
 
