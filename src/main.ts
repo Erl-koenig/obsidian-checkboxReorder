@@ -68,7 +68,7 @@ class CheckboxReorderSettingsTab extends PluginSettingTab {
 
 		containerEl.empty();
 
-		new Setting(containerEl).setName("Checkbox Reorder Settings").setHeading();
+		new Setting(containerEl).setName("Sorting").setHeading();
 
 		new Setting(containerEl)
 			.setName("Top / Bottom")
