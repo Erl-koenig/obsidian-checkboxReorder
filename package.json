@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-reorder-checkboxes",
-	"version": "2.0.3",
+	"version": "2.0.4",
 	"description": "This plugin adds a command that lets you reorder checkboxes in the order todo > done",
 	"main": "main.js",
 	"scripts": {
